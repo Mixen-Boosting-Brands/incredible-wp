@@ -1,0 +1,32 @@
+.card-blog {
+    border: 2px solid $color-texto-principal;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 100%;
+
+    .card-img-top {
+        border-radius: 0;
+    }
+
+    .card-meta {
+        small {
+            color: $color-texto-principal;
+            opacity: 0.6;
+        }
+    }
+
+    .card-title {
+        color: $azul;
+        @include font-size(1.6rem);
+    }
+
+    .card-text small {
+        opacity: 0.7;
+    }
+
+    .btn {
+        flex-shrink: 0;
+        @include font-size(1rem);
+        padding: 0.4rem 1.25rem;
+    }
+}

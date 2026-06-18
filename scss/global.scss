@@ -1,0 +1,532 @@
+// Global styles
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color-texto-principal;
+    font-family: "Proxima Soft", sans-serif;
+    font-weight: normal;
+    line-height: 1.8rem;
+    overflow-y: hidden;
+    position: relative;
+    @include font-size(1.4rem);
+
+    @include color-mode(dark) {
+        background-color: #1e1e1e;
+        color: #f1f1f1;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+small {
+    @include font-size(1rem);
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+section {
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.mh-100 {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    @include transition(ease, 0.3s);
+}
+
+.my-120 {
+    margin: 120px 0;
+}
+
+.mt-120 {
+    margin-top: 120px;
+}
+
+.mb-120 {
+    margin-bottom: 120px;
+}
+
+.my-60 {
+    margin: 60px 0;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.my-30 {
+    margin: 30px 0;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.py-120 {
+    padding: 120px 0;
+}
+
+.pt-120 {
+    padding-top: 120px;
+}
+
+.pb-120 {
+    padding-bottom: 120px;
+}
+
+.py-60 {
+    padding: 60px 0;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.py-30 {
+    padding: 30px 0;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.elemento-parallax {
+    will-change: transform;
+    transform: translateY(0);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.1s ease-out;
+    pointer-events: none; // Opcional: evita interferencias con clicks
+}
+
+.whatsapp {
+    @include whatsapp-button;
+}
+
+.card {
+    border: none;
+
+    .card-img-top {
+        border-radius: 30px;
+    }
+
+    .card-title {
+        color: $azul;
+        font-weight: bold;
+    }
+}
+
+header {
+    background-color: $azul;
+    width: 90%;
+    height: auto;
+    margin: 15px auto;
+    padding: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    @include font-size(1.2rem);
+    @include absolute-center-x;
+    @include transition(ease, 0.2s);
+
+    #logo-navbar {
+        width: 200px;
+        @include transition(ease, 0.2s);
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            color: $rojo;
+        }
+    }
+
+    #mburger {
+        @include font-size(1.6rem);
+    }
+}
+
+.navbar-scroll {
+    padding: 10px !important;
+    @include transition(ease, 0.3s);
+
+    #logo-navbar {
+        width: 180px !important;
+    }
+}
+
+.btn {
+    color: white;
+    font-weight: bold;
+    @include font-size(1.2rem);
+}
+
+.btn-secondary {
+    color: $color-texto-principal;
+}
+
+.btn-light {
+    color: $color-texto-principal;
+}
+
+.titulo-highlight {
+    color: $rojo;
+    font-family: "alkaline_testbold", sans-serif;
+    line-height: 1.2;
+    @include font-size(10rem);
+}
+
+.font-alkaline {
+    font-family: "alkaline_testbold", sans-serif;
+}
+
+.section-amarillo {
+    background-color: $amarillo;
+    color: $color-texto-principal;
+}
+
+.section-rojo {
+    background-color: $rojo;
+    color: white;
+}
+
+.section-azul {
+    background-color: $azul;
+    color: white;
+}
+
+.text-amarillo {
+    color: $amarillo;
+}
+
+.text-rojo {
+    color: $rojo;
+}
+
+.text-azul {
+    color: $azul;
+}
+
+.section-wave {
+    position: relative;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: block;
+}
+
+.card.text-bg-dark {
+    overflow: hidden;
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+    }
+
+    .card-title {
+        color: white;
+    }
+
+    small {
+        @include font-size(1.2rem);
+    }
+}
+
+#hero {
+    background-position: center !important;
+    background-size: cover !important;
+    color: white;
+    height: 100vh;
+    position: relative;
+    @include font-size(1.6rem);
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .container,
+    .row {
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+    }
+
+    h1 {
+        font-family: "alkaline_testbold", sans-serif;
+        @include font-size(10rem);
+
+        text-shadow:
+            -2px -2px 0 $amarillo,
+            2px -2px 0 $amarillo,
+            -2px 2px 0 $amarillo,
+            2px 2px 0 $amarillo;
+    }
+}
+
+#caracteristicas {
+    #roni-1 {
+        position: relative;
+    }
+}
+
+#experiencia {
+    #text-aux-1,
+    #text-aux-2 {
+        position: relative;
+    }
+
+    #text-aux-1 {
+        bottom: -12px;
+    }
+
+    #text-aux-2 {
+        top: -12px;
+    }
+}
+
+#sigue-descubriendo {
+    #text-aux-1 {
+        position: relative;
+        bottom: -12px;
+    }
+}
+
+#fiesta-recordar {
+    #text-aux-1 {
+        position: relative;
+        bottom: -12px;
+    }
+}
+
+#banner-1 {
+    background: url("../images/bg-banner.png") no-repeat;
+    background-size: cover !important;
+    background-position: center !important;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    #banner-roni-1,
+    #banner-roni-2 {
+        background-size: contain !important;
+        background-position: center !important;
+        position: absolute;
+        bottom: 0;
+    }
+
+    #banner-roni-1 {
+        background: url("../images/banner-roni-1@2x.png") no-repeat;
+        left: 0;
+        width: 264px;
+        height: 360px;
+    }
+
+    #banner-roni-2 {
+        background: url("../images/banner-roni-2@2x.png") no-repeat;
+        right: 0;
+        width: 261px;
+        height: 360px;
+    }
+}
+
+#banner-2 {
+    background-color: $rojo;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        font-family: "alkaline_testbold", sans-serif;
+        @include font-size(10rem);
+
+        text-shadow:
+            -2px -2px 0 $amarillo,
+            2px -2px 0 $amarillo,
+            -2px 2px 0 $amarillo,
+            2px 2px 0 $amarillo;
+    }
+
+    #text-aux-1,
+    #text-aux-2 {
+        position: relative;
+    }
+
+    #text-aux-1 {
+        bottom: -12px;
+    }
+
+    #text-aux-2 {
+        top: -16px;
+    }
+
+    #banner-pizza-1,
+    #banner-pizza-2 {
+        background-size: contain !important;
+        background-position: center !important;
+        position: absolute;
+        bottom: 0;
+    }
+
+    #banner-pizza-1 {
+        background: url("../images/banner-pizza-1@2x.png") no-repeat;
+        left: 0;
+        width: 326px;
+        height: 321px;
+    }
+
+    #banner-pizza-2 {
+        background: url("../images/banner-pizza-2@2x.png") no-repeat;
+        right: 0;
+        width: 251px;
+        height: 393px;
+    }
+}
+
+footer {
+    overflow: hidden;
+
+    a {
+        color: white;
+    }
+
+    i {
+        position: relative;
+    }
+
+    .fa-location-pin {
+        top: -25px;
+    }
+
+    .fa-clock {
+        top: -25px;
+    }
+
+    .fa-phone {
+        top: 0;
+    }
+
+    .social {
+        a {
+            background-color: white;
+            color: $color-texto-principal;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-size(1rem);
+
+            &:hover {
+                background-color: darken(white, 10);
+            }
+        }
+    }
+}
+
+#tipos-eventos {
+    #text-aux-1 {
+        position: relative;
+    }
+
+    #text-aux-1 {
+        bottom: -12px;
+    }
+}
+
+#banner-cumple {
+    #roni-cumple-1,
+    #roni-cumple-2 {
+        position: absolute;
+        z-index: 2;
+    }
+
+    #roni-cumple-1 {
+        bottom: -40px;
+        left: 0;
+        width: 260px;
+    }
+
+    #roni-cumple-2 {
+        right: 0;
+        top: 0;
+        width: 340px;
+    }
+}
+
+#banner-glow {
+    color: white;
+
+    > .container > h1 {
+        font-family: "alkaline_testbold", sans-serif;
+        @include font-size(10rem);
+
+        text-shadow:
+            -2px -2px 0 $amarillo,
+            2px -2px 0 $amarillo,
+            -2px 2px 0 $amarillo,
+            2px 2px 0 $amarillo;
+    }
+}
+
+#banner-premium {
+    .titulo-highlight {
+        color: $color-texto-principal;
+    }
+}

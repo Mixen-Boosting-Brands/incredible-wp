@@ -1,0 +1,48 @@
+// FontAwesome
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+@font-face {
+    font-family: "alkaline_testbold";
+    src:
+        url("../fonts/alkalinetest-bold-bf676e1b6c6a873-webfont.woff2")
+            format("woff2"),
+        url("../fonts/alkalinetest-bold-bf676e1b6c6a873-webfont.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Soft";
+    src:
+        url("../fonts/ProximaSoft-Bold.woff2") format("woff2"),
+        url("../fonts/ProximaSoft-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Proxima Soft";
+    src:
+        url("../fonts/ProximaSoft-Regular.woff2") format("woff2"),
+        url("../fonts/ProximaSoft-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Proxima Soft";
+    src:
+        url("../fonts/ProximaSoft-SemiBold.woff2") format("woff2"),
+        url("../fonts/ProximaSoft-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

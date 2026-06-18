@@ -1,0 +1,14 @@
+@keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-item {
+    padding: 0 2.5rem;
+}

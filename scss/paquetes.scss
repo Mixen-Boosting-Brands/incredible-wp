@@ -1,0 +1,104 @@
+// Contenedor gris que agrupa las tarjetas de precio
+.pricing-wrapper {
+    background-color: #efefef;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+}
+
+// Tarjeta individual de precio
+.pricing-card {
+    background: white;
+    border: 2px solid $color-texto-principal;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &.pricing-featured {
+        border-width: 3px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+.pricing-title {
+    color: $azul;
+    font-weight: bold;
+    margin-bottom: 0;
+    @include font-size(1.6rem);
+}
+
+.pricing-price {
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 0;
+    @include font-size(4rem);
+}
+
+.pricing-label {
+    @include font-size(1.2rem);
+}
+
+.pricing-features {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 1.5rem;
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        i {
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+// Variante translúcida para fondos oscuros (Glow Party)
+.pricing-card-glow {
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(6px);
+    border: none;
+    color: $color-texto-principal;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    .btn {
+        width: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+// Mascota en la sección de precios
+.pricing-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    width: 200px;
+    pointer-events: none;
+}
+
+@include media-breakpoint-up(lg) {
+    .pricing-wrapper {
+        padding-top: 3.5rem;
+        padding-bottom: 260px;
+    }
+
+    .pricing-card.pricing-featured {
+        transform: scale(1.07);
+        position: relative;
+        z-index: 1;
+    }
+
+    .pricing-mascot {
+        width: 280px;
+        right: 0;
+    }
+}

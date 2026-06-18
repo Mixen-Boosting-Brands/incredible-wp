@@ -1,0 +1,129 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    #experiencia {
+        #text-aux-1 {
+            bottom: -40px;
+            left: -30px;
+        }
+
+        #text-aux-2 {
+            top: -45px;
+            left: 146px;
+        }
+    }
+
+    #banner-2 {
+        #text-aux-1 {
+            bottom: -18px;
+            left: -180px;
+        }
+
+        #text-aux-2 {
+            top: -45px;
+            left: 130px;
+        }
+
+        #banner-pizza-1 {
+            left: -132px;
+        }
+
+        #banner-pizza-2 {
+            right: -152px;
+        }
+    }
+
+    #tipos-eventos {
+        #text-aux-1 {
+            bottom: -40px;
+        }
+    }
+
+    #sigue-descubriendo {
+        #text-aux-1 {
+            bottom: -40px;
+            left: -110px;
+        }
+    }
+
+    #fiesta-recordar {
+        #text-aux-1 {
+            bottom: -40px;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    #caracteristicas {
+        #roni-1 {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            @include absolute-center-x;
+        }
+    }
+
+    #banner-2 {
+        #text-aux-1 {
+            bottom: -50px;
+            left: -264px;
+        }
+
+        #text-aux-2 {
+            top: -45px;
+            left: 130px;
+        }
+
+        #banner-pizza-1 {
+            left: -132px;
+        }
+
+        #banner-pizza-2 {
+            right: -152px;
+        }
+    }
+
+    footer {
+        #roni-2 {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            @include absolute-center-x;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+    #banner-2 {
+        #text-aux-1 {
+            bottom: -56px;
+            left: -294px;
+        }
+
+        #text-aux-2 {
+            top: -56px;
+            left: 126px;
+        }
+
+        #banner-pizza-1 {
+            left: 0;
+        }
+
+        #banner-pizza-2 {
+            width: 279px;
+            height: 437px;
+            right: 0;
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}
