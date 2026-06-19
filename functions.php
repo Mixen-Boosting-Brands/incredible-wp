@@ -21,6 +21,12 @@ function incredible_setup() {
         'html5',
         array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'script', 'style' )
     );
+
+    register_nav_menus(
+        array(
+            'primary' => __( 'Menú principal' ),
+        )
+    );
 }
 add_action( 'after_setup_theme', 'incredible_setup' );
 
@@ -51,7 +57,58 @@ function incredible_scripts() {
 add_action( 'wp_enqueue_scripts', 'incredible_scripts' );
 
 /**
- * Links del menú principal (mobile + desktop), compartidos en header.php.
+ * Walker para el menú de WP: genera <li><a>...</a></li> simple para que
+ * encaje con el markup de Bootstrap (list-inline-item / clase "anchor"),
+ * sin las clases adicionales que agrega Walker_Nav_Menu por defecto.
+ */
+class Incredible_Nav_Walker extends Walker_Nav_Menu {
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $li_class   = ! empty( $args->li_class ) ? ' class="' . esc_attr( $args->li_class ) . '"' : '';
+        $link_class = ! empty( $args->link_class ) ? ' class="' . esc_attr( $args->link_class ) . '"' : '';
+
+        $output .= '<li' . $li_class . '>';
+        $output .= '<a href="' . esc_url( $item->url ) . '"' . $link_class . '>';
+        $output .= esc_html( $item->title );
+        $output .= '</a>';
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= '</li>';
+    }
+}
+
+/**
+ * Fallback del menú móvil (#navmenu) mientras no se haya asignado un menú
+ * de WP a la ubicación "primary" en Apariencia > Menús.
+ */
+function incredible_nav_fallback_mobile() {
+    foreach ( incredible_get_nav_items() as $item ) {
+        printf(
+            '<li><a class="anchor" href="%s">%s</a></li>',
+            esc_url( $item['url'] ),
+            esc_html( $item['label'] )
+        );
+    }
+}
+
+/**
+ * Fallback del menú de escritorio mientras no se haya asignado un menú
+ * de WP a la ubicación "primary" en Apariencia > Menús.
+ */
+function incredible_nav_fallback_desktop() {
+    foreach ( incredible_get_nav_items() as $item ) {
+        printf(
+            '<li class="list-inline-item"><a href="%s">%s</a></li>',
+            esc_url( $item['url'] ),
+            esc_html( $item['label'] )
+        );
+    }
+}
+
+/**
+ * Links de respaldo del menú principal (mobile + desktop), usados por
+ * incredible_nav_fallback_mobile()/incredible_nav_fallback_desktop() solo
+ * mientras no exista un menú de WP asignado a la ubicación "primary".
  *
  * El sitio espera una página con cada uno de estos slugs (buffet, paquetes,
  * cumpleanos, eventos, juegos, blog) ya que cada una usa su propio

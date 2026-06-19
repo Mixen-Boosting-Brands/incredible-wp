@@ -52,18 +52,23 @@
                     />
                 </a>
                 <nav>
-                    <ul id="navmenu" class="list-unstyled mb-0">
-                        <?php foreach ( incredible_get_nav_items() as $i => $item ) : ?>
-                            <li>
-                                <a
-                                    class="anchor"
-                                    id="btn-nav-<?php echo esc_attr( $i + 1 ); ?>"
-                                    href="<?php echo esc_url( $item['url'] ); ?>"
-                                    ><?php echo esc_html( $item['label'] ); ?></a
-                                >
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'primary',
+                            'container'      => false,
+                            'menu_id'        => 'navmenu',
+                            'menu_class'     => 'list-unstyled mb-0',
+                            'link_class'     => 'anchor',
+                            'walker'         => new Incredible_Nav_Walker(),
+                            'fallback_cb'    => function () {
+                                echo '<ul id="navmenu" class="list-unstyled mb-0">';
+                                incredible_nav_fallback_mobile();
+                                echo '</ul>';
+                            },
+                        )
+                    );
+                    ?>
                 </nav>
                 <ul class="list-unstyled">
                     <li>
@@ -97,15 +102,22 @@
                     </div>
                     <div class="col-lg-6 d-none d-xl-block my-auto text-center">
                         <nav>
-                            <ul class="list-inline mb-0">
-                                <?php foreach ( incredible_get_nav_items() as $item ) : ?>
-                                    <li class="list-inline-item">
-                                        <a href="<?php echo esc_url( $item['url'] ); ?>">
-                                            <?php echo esc_html( $item['label'] ); ?>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'primary',
+                                    'container'      => false,
+                                    'menu_class'     => 'list-inline mb-0',
+                                    'li_class'       => 'list-inline-item',
+                                    'walker'         => new Incredible_Nav_Walker(),
+                                    'fallback_cb'    => function () {
+                                        echo '<ul class="list-inline mb-0">';
+                                        incredible_nav_fallback_desktop();
+                                        echo '</ul>';
+                                    },
+                                )
+                            );
+                            ?>
                         </nav>
                     </div>
                     <div class="col-6 col-xl-3 my-auto text-end">
