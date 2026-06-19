@@ -119,7 +119,10 @@
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a class="btn btn-light rounded-pill" href="#">
+                                <a
+                                    class="btn btn-light rounded-pill"
+                                    href="<?php echo esc_url( get_permalink( 28 ) ); ?>"
+                                >
                                     Preguntas frecuentes
                                 </a>
                             </li>
