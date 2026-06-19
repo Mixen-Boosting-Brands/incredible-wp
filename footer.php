@@ -150,6 +150,15 @@
             </svg>
         </footer>
 
+        <a
+            href="https://wa.me/526144222550?text=<?php echo rawurlencode( 'Hola, necesito información.' ); ?>"
+            class="whatsapp"
+            target="_blank"
+            rel="noopener"
+        >
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
+
         <div class="text-center py-3">
             <small>
                 <a href="#" class="text-muted">Aviso de privacidad</a>. | Design
