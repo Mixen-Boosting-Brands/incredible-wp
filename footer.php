@@ -85,7 +85,7 @@
                         >
                             <li class="list-inline-item">
                                 <a href="https://www.facebook.com/ipchih" target="_blank"
-                                    ><i class="fa-brands fa-instagram"></i
+                                    ><i class="fa-brands fa-facebook-f"></i
                                 ></a>
                             </li>
                             <li class="list-inline-item">
