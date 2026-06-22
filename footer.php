@@ -7,7 +7,10 @@
                         class="col-lg-4 position-relative mb-4 mb-lg-0 text-center"
                     >
                         <img
-                            src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/roni-2@2x.png' ); ?>"
+                            src="<?php echo esc_url(
+                                get_template_directory_uri() .
+                                    "/assets/images/roni-2@2x.png",
+                            ); ?>"
                             alt=""
                             id="roni-2"
                             class="img-fluid"
@@ -81,18 +84,18 @@
                             data-aos-duration="1000"
                         >
                             <li class="list-inline-item">
-                                <a href="#" target="_blank"
+                                <a href="https://www.facebook.com/ipchih" target="_blank"
                                     ><i class="fa-brands fa-instagram"></i
                                 ></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" target="_blank"
-                                    ><i class="fa-brands fa-x-twitter"></i
+                                <a href="https://www.youtube.com/@incrediblepizzachihuahua703" target="_blank"
+                                    ><i class="fa-brands fa-youtube"></i
                                 ></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" target="_blank"
-                                    ><i class="fa-brands fa-youtube"></i
+                                <a href="https://www.instagram.com/incrediblepizza_chihuahua" target="_blank"
+                                    ><i class="fa-brands fa-instagram"></i
                                 ></a>
                             </li>
                         </ul>
@@ -105,7 +108,9 @@
                             <li class="mb-3">
                                 <a
                                     class="btn btn-light rounded-pill"
-                                    href="<?php echo esc_url( home_url( '/paquetes/' ) ); ?>"
+                                    href="<?php echo esc_url(
+                                        home_url("/paquetes/"),
+                                    ); ?>"
                                 >
                                     Ver paquetes
                                 </a>
@@ -113,7 +118,9 @@
                             <li class="mb-3">
                                 <a
                                     class="btn btn-light rounded-pill"
-                                    href="<?php echo esc_url( home_url( '/cumpleanos/' ) ); ?>"
+                                    href="<?php echo esc_url(
+                                        home_url("/cumpleanos/"),
+                                    ); ?>"
                                 >
                                     Cumpleaños
                                 </a>
@@ -121,7 +128,9 @@
                             <li class="mb-3">
                                 <a
                                     class="btn btn-light rounded-pill"
-                                    href="<?php echo esc_url( get_permalink( 28 ) ); ?>"
+                                    href="<?php echo esc_url(
+                                        get_permalink(28),
+                                    ); ?>"
                                 >
                                     Preguntas frecuentes
                                 </a>
@@ -154,7 +163,9 @@
         </footer>
 
         <a
-            href="https://wa.me/526144222550?text=<?php echo rawurlencode( 'Hola, necesito información.' ); ?>"
+            href="https://wa.me/526144222550?text=<?php echo rawurlencode(
+                "Hola, necesito información.",
+            ); ?>"
             class="whatsapp"
             target="_blank"
             rel="noopener"
