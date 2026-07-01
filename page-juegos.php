@@ -9,7 +9,9 @@ $theme_uri = get_template_directory_uri();
 <section
     id="hero"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-juegos.png' ); ?>) no-repeat;
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-hero-juegos.png",
+        ); ?>) no-repeat;
     "
 >
     <div class="overlay"></div>
@@ -37,23 +39,25 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="<?php echo esc_url( home_url( '/paquetes/' ) ); ?>"
+                                href="<?php echo esc_url(
+                                    home_url("/paquetes/"),
+                                ); ?>"
                                 class="btn btn-secondary rounded-pill"
                                 >Ver paquetes</a
                             >
                         </li>
-                        <li
+                        <!-- li
                             class="list-inline-item"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="600"
                         >
                             <a
-                                href="#"
+                                href="<php echo esc_url( home_url( '/paquetes/' ) ); ?>"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
-                        </li>
+                        </li -->
                     </ul>
                 </div>
             </div>
@@ -86,7 +90,9 @@ $theme_uri = get_template_directory_uri();
                 data-aos-duration="1000"
             >
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/juego-topgun.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/juego-topgun.png",
+                    ); ?>"
                     class="img-fluid rounded-4 mb-3 w-100"
                     alt="Top Gun"
                 />
@@ -108,7 +114,9 @@ $theme_uri = get_template_directory_uri();
                 data-aos-delay="200"
             >
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/juego-godzilla.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/juego-godzilla.png",
+                    ); ?>"
                     class="img-fluid rounded-4 mb-3 w-100"
                     alt="Godzilla"
                 />
@@ -129,7 +137,9 @@ $theme_uri = get_template_directory_uri();
                 data-aos-delay="400"
             >
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/juego-vr.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/juego-vr.png",
+                    ); ?>"
                     class="img-fluid rounded-4 mb-3 w-100"
                     alt="VR Experience"
                 />
@@ -151,7 +161,9 @@ $theme_uri = get_template_directory_uri();
                 data-aos-delay="600"
             >
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/juego-gokarts.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/juego-gokarts.png",
+                    ); ?>"
                     class="img-fluid rounded-4 mb-3 w-100"
                     alt="Go Karts"
                 />
@@ -179,7 +191,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/juegos-foto-arcade.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/juegos-foto-arcade.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt="Arcade Incredible Pizza"
                 />
@@ -211,7 +225,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Mascota: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/roni-kart@2x.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/roni-kart@2x.png",
+                    ); ?>"
                     id="roni-kart"
                     class="img-fluid"
                     alt="Roni en Go Kart"

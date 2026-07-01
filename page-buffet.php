@@ -9,7 +9,9 @@ $theme_uri = get_template_directory_uri();
 <section
     id="hero"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-buffet.png' ); ?>) no-repeat;
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-hero-buffet.png",
+        ); ?>) no-repeat;
     "
 >
     <div class="overlay"></div>
@@ -40,23 +42,25 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="<?php echo esc_url( home_url( '/paquetes/' ) ); ?>"
+                                href="<?php echo esc_url(
+                                    home_url("/paquetes/"),
+                                ); ?>"
                                 class="btn btn-secondary rounded-pill"
                                 >Ver paquetes</a
                             >
                         </li>
-                        <li
+                        <!-- li
                             class="list-inline-item"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="600"
                         >
                             <a
-                                href="#"
+                                href="<php echo esc_url( home_url( '/paquetes/' ) ); ?>"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
-                        </li>
+                        </li -->
                     </ul>
                 </div>
             </div>
@@ -82,35 +86,50 @@ $theme_uri = get_template_directory_uri();
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img
-                                src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-foto-pizza.png' ); ?>"
+                                src="<?php echo esc_url(
+                                    $theme_uri .
+                                        "/assets/images/buffet-foto-pizza.png",
+                                ); ?>"
                                 class="img-fluid rounded-4"
                                 alt="Buffet de pizza"
                             />
                         </div>
                         <div class="carousel-item">
                             <img
-                                src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-foto-pizza.png' ); ?>"
+                                src="<?php echo esc_url(
+                                    $theme_uri .
+                                        "/assets/images/buffet-foto-pizza.png",
+                                ); ?>"
                                 class="img-fluid rounded-4"
                                 alt="Buffet de pizza"
                             />
                         </div>
                         <div class="carousel-item">
                             <img
-                                src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-foto-pizza.png' ); ?>"
+                                src="<?php echo esc_url(
+                                    $theme_uri .
+                                        "/assets/images/buffet-foto-pizza.png",
+                                ); ?>"
                                 class="img-fluid rounded-4"
                                 alt="Buffet de pizza"
                             />
                         </div>
                         <div class="carousel-item">
                             <img
-                                src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-foto-pizza.png' ); ?>"
+                                src="<?php echo esc_url(
+                                    $theme_uri .
+                                        "/assets/images/buffet-foto-pizza.png",
+                                ); ?>"
                                 class="img-fluid rounded-4"
                                 alt="Buffet de pizza"
                             />
                         </div>
                         <div class="carousel-item">
                             <img
-                                src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-foto-pizza.png' ); ?>"
+                                src="<?php echo esc_url(
+                                    $theme_uri .
+                                        "/assets/images/buffet-foto-pizza.png",
+                                ); ?>"
                                 class="img-fluid rounded-4"
                                 alt="Buffet de pizza"
                             />
@@ -170,7 +189,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Mascota Roni versión chef -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/roni-chef@2x.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/roni-chef@2x.png",
+                    ); ?>"
                     id="roni-chef"
                     class="img-fluid"
                     alt="Roni Chef"
@@ -183,7 +204,7 @@ $theme_uri = get_template_directory_uri();
 <!-- Strip: Sirve. Disfruta. Repite. -->
 <section class="section-amarillo py-30 overflow-hidden">
     <div class="marquee-track">
-        <?php for ( $i = 0; $i < 8; $i++ ) : ?>
+        <?php for ($i = 0; $i < 8; $i++): ?>
             <h2 class="fw-bold mb-0 marquee-item">
                 Sirve. &nbsp;&nbsp; Disfruta. &nbsp;&nbsp; Repite.
                 &nbsp;&nbsp; ★
@@ -230,7 +251,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto actividad 1: Go Karts -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-actividad-1.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/buffet-actividad-1.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt=""
                 />
@@ -243,7 +266,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto actividad 2: Arcade -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-actividad-2.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/buffet-actividad-2.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt=""
                 />
@@ -256,7 +281,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto actividad 3: Laser / VR -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/buffet-actividad-3.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/buffet-actividad-3.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt=""
                 />

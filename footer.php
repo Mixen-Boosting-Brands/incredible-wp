@@ -125,16 +125,16 @@
                                     Cumpleaños
                                 </a>
                             </li>
-                            <li class="mb-3">
+                            <!-- li class="mb-3">
                                 <a
                                     class="btn btn-light rounded-pill"
-                                    href="<?php echo esc_url(
+                                    href="<php echo esc_url(
                                         get_permalink(28),
                                     ); ?>"
                                 >
                                     Preguntas frecuentes
                                 </a>
-                            </li>
+                            </li -->
                         </ul>
                     </div>
                 </div>
@@ -162,8 +162,8 @@
             </svg>
         </footer>
 
-        <a
-            href="https://wa.me/526144222550?text=<?php echo rawurlencode(
+        <!-- a
+            href="https://wa.me/526144222550?text=<php echo rawurlencode(
                 "Hola, necesito información.",
             ); ?>"
             class="whatsapp"
@@ -171,7 +171,7 @@
             rel="noopener"
         >
             <i class="fab fa-whatsapp whatsapp-icon"></i>
-        </a>
+        </a -->
 
         <div class="text-center py-3">
             <small>

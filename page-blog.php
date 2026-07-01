@@ -8,7 +8,9 @@ $theme_uri = get_template_directory_uri();
 <!-- Hero -->
 <section
     id="hero"
-    style="background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-blog.png' ); ?>) no-repeat"
+    style="background: url(<?php echo esc_url(
+        $theme_uri . "/assets/images/bg-hero-blog.png",
+    ); ?>) no-repeat"
 >
     <div class="overlay"></div>
     <div class="container">
@@ -36,23 +38,25 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="<?php echo esc_url( home_url( '/paquetes/' ) ); ?>"
+                                href="<?php echo esc_url(
+                                    home_url("/paquetes/"),
+                                ); ?>"
                                 class="btn btn-secondary rounded-pill"
                                 >Ver paquetes</a
                             >
                         </li>
-                        <li
+                        <!-- li
                             class="list-inline-item"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="600"
                         >
                             <a
-                                href="#"
+                                href="<php echo esc_url( home_url( '/paquetes/' ) ); ?>"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
-                        </li>
+                        </li -->
                     </ul>
                 </div>
             </div>
@@ -86,7 +90,9 @@ $theme_uri = get_template_directory_uri();
 <section class="pb-60">
     <div class="container">
         <img
-            src="<?php echo esc_url( $theme_uri . '/assets/images/blog-foto-portada.png' ); ?>"
+            src="<?php echo esc_url(
+                $theme_uri . "/assets/images/blog-foto-portada.png",
+            ); ?>"
             class="img-fluid rounded-4 mb-5"
             alt="Un día completo en Incredible Pizza"
             data-aos="fade-up"
@@ -141,71 +147,14 @@ $theme_uri = get_template_directory_uri();
             entretenimiento en una experiencia completa.
         </p>
 
-        <!-- Últimos 3 posts del blog -->
-        <div class="row g-4">
-            <?php
-            $incredible_latest_posts = new WP_Query(
-                array(
-                    'post_type'           => 'post',
-                    'post_status'         => 'publish',
-                    'posts_per_page'      => 3,
-                    'ignore_sticky_posts' => true,
-                )
-            );
-
-            if ( $incredible_latest_posts->have_posts() ) :
-                $incredible_card_delay = 0;
-                while ( $incredible_latest_posts->have_posts() ) :
-                    $incredible_latest_posts->the_post();
-                    ?>
-                    <div
-                        class="col-lg-4"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="<?php echo esc_attr( $incredible_card_delay ); ?>"
-                    >
-                        <div class="card card-blog">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <?php the_post_thumbnail( 'medium_large', array( 'class' => 'card-img-top' ) ); ?>
-                            <?php else : ?>
-                                <img
-                                    src="<?php echo esc_url( $theme_uri . '/assets/images/blog-thumb-1.png' ); ?>"
-                                    class="card-img-top"
-                                    alt="<?php the_title_attribute(); ?>"
-                                />
-                            <?php endif; ?>
-                            <div class="card-body">
-                                <div
-                                    class="card-meta d-flex align-items-center justify-content-between mb-3"
-                                >
-                                    <small><?php echo esc_html( incredible_get_primary_category() ); ?></small>
-                                    <a
-                                        href="<?php the_permalink(); ?>"
-                                        class="btn btn-primary rounded-pill"
-                                        >Leer más</a
-                                    >
-                                </div>
-                                <h3 class="card-title h5">
-                                    <?php the_title(); ?>
-                                </h3>
-                                <p class="card-text mb-0">
-                                    <small><?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?></small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                    $incredible_card_delay += 200;
-                endwhile;
-                wp_reset_postdata();
-            else :
-                ?>
-                <div class="col-12 text-center">
-                    <p class="mb-0">Muy pronto nuevas publicaciones.</p>
-                </div>
-                <?php
-            endif;
-            ?>
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-12 text-center">
+                <a
+                    href="#"
+                    class="btn btn-secondary rounded-pill"
+                    >Ver blog</a
+                >
+            </div>
         </div>
     </div>
 </section>

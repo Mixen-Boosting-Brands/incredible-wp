@@ -9,7 +9,9 @@ $theme_uri = get_template_directory_uri();
 <section
     id="hero"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-eventos.png' ); ?>) no-repeat;
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-hero-eventos.png",
+        ); ?>) no-repeat;
     "
 >
     <div class="overlay"></div>
@@ -41,7 +43,9 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="#"
+                                href="<?php echo esc_url(
+                                    home_url("/paquetes/"),
+                                ); ?>"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
@@ -64,7 +68,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/eventos-foto-grupo.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/eventos-foto-grupo.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt="Grupos en Incredible Pizza"
                 />
@@ -101,7 +107,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Mascota: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/roni-eventos@2x.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/roni-eventos@2x.png",
+                    ); ?>"
                     id="roni-eating"
                     class="img-fluid"
                     alt="Roni"
@@ -114,7 +122,7 @@ $theme_uri = get_template_directory_uri();
 <!-- Marquee: Así se viven los eventos en Incredible Pizza -->
 <section class="section-amarillo py-30 overflow-hidden">
     <div class="marquee-track">
-        <?php for ( $i = 0; $i < 8; $i++ ) : ?>
+        <?php for ($i = 0; $i < 8; $i++): ?>
             <h2 class="fw-bold mb-0 marquee-item">
                 Así se viven los eventos en Incredible Pizza &nbsp;&nbsp; ★
             </h2>
@@ -253,7 +261,9 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Mascota: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/roni-eventos-stats@2x.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri . "/assets/images/roni-eventos-stats@2x.png",
+                    ); ?>"
                     class="img-fluid"
                     alt="Roni"
                 />

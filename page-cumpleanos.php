@@ -9,7 +9,9 @@ $theme_uri = get_template_directory_uri();
 <section
     id="hero"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-cumpleanos.png' ); ?>)
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-hero-cumpleanos.png",
+        ); ?>)
             no-repeat;
     "
 >
@@ -42,7 +44,9 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="#"
+                                href="<?php echo esc_url(
+                                    home_url("/paquetes/"),
+                                ); ?>"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
@@ -90,7 +94,10 @@ $theme_uri = get_template_directory_uri();
             >
                 <!-- Foto: actualizar src -->
                 <img
-                    src="<?php echo esc_url( $theme_uri . '/assets/images/cumpleanos-foto-trampolin.png' ); ?>"
+                    src="<?php echo esc_url(
+                        $theme_uri .
+                            "/assets/images/cumpleanos-foto-trampolin.png",
+                    ); ?>"
                     class="img-fluid rounded-4"
                     alt="Celebra en Incredible Pizza"
                 />
@@ -104,7 +111,9 @@ $theme_uri = get_template_directory_uri();
     id="banner-cumple"
     class="section-wave wave-azul overflow-visible text-center text-white pt-60 pb-120 z-1"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-cumpleanos-incluye.png' ); ?>)
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-cumpleanos-incluye.png",
+        ); ?>)
             no-repeat #406eac;
         background-size: cover;
         background-position: center;
@@ -144,7 +153,9 @@ $theme_uri = get_template_directory_uri();
     <!-- Mascotas: actualizar src -->
     <img
         id="roni-cumple-1"
-        src="<?php echo esc_url( $theme_uri . '/assets/images/roni-cumpleanos-1@2x.png' ); ?>"
+        src="<?php echo esc_url(
+            $theme_uri . "/assets/images/roni-cumpleanos-1@2x.png",
+        ); ?>"
         class="img-fluid d-none d-lg-block"
         alt="Roni"
         data-aos="fade-right"
@@ -153,7 +164,9 @@ $theme_uri = get_template_directory_uri();
     />
     <img
         id="roni-cumple-2"
-        src="<?php echo esc_url( $theme_uri . '/assets/images/roni-cumpleanos-2@2x.png' ); ?>"
+        src="<?php echo esc_url(
+            $theme_uri . "/assets/images/roni-cumpleanos-2@2x.png",
+        ); ?>"
         class="img-fluid d-none d-lg-block"
         alt="Roni"
         data-aos="fade-left"
@@ -370,7 +383,9 @@ $theme_uri = get_template_directory_uri();
             </small>
 
             <img
-                src="<?php echo esc_url( $theme_uri . '/assets/images/roni-paquetes@2x.png' ); ?>"
+                src="<?php echo esc_url(
+                    $theme_uri . "/assets/images/roni-paquetes@2x.png",
+                ); ?>"
                 class="pricing-mascot img-fluid d-none d-lg-block"
                 alt="Roni"
             />
@@ -383,7 +398,9 @@ $theme_uri = get_template_directory_uri();
     id="banner-glow"
     class="py-60 text-center"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-cumpleanos-glow.png' ); ?>)
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-cumpleanos-glow.png",
+        ); ?>)
             no-repeat #1b1340;
         background-size: cover;
         background-position: center;
@@ -559,7 +576,9 @@ $theme_uri = get_template_directory_uri();
     id="banner-premium"
     class="pt-60 pb-120 position-relative section-wave overflow-visible"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-cumpleanos-premium.png' ); ?>)
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-cumpleanos-premium.png",
+        ); ?>)
             no-repeat #fbda1f;
         background-size: cover;
         background-position: center;

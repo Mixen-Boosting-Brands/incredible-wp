@@ -9,7 +9,9 @@ $theme_uri = get_template_directory_uri();
 <section
     id="hero"
     style="
-        background: url(<?php echo esc_url( $theme_uri . '/assets/images/bg-hero-paquetes.png' ); ?>) no-repeat;
+        background: url(<?php echo esc_url(
+            $theme_uri . "/assets/images/bg-hero-paquetes.png",
+        ); ?>) no-repeat;
     "
 >
     <div class="overlay"></div>
@@ -41,7 +43,7 @@ $theme_uri = get_template_directory_uri();
                             data-aos-delay="400"
                         >
                             <a
-                                href="#"
+                                href="#paquetes"
                                 class="btn btn-primary rounded-pill"
                                 >Reservar</a
                             >
@@ -54,7 +56,7 @@ $theme_uri = get_template_directory_uri();
 </section>
 
 <!-- Elige tu paquete -->
-<section class="pt-60 pb-30">
+<section id="paquetes" class="pt-60 pb-30">
     <div class="container">
         <div class="pricing-wrapper text-center">
             <h1
@@ -232,7 +234,9 @@ $theme_uri = get_template_directory_uri();
 
             <!-- Mascota: actualizar src -->
             <img
-                src="<?php echo esc_url( $theme_uri . '/assets/images/roni-paquetes@2x.png' ); ?>"
+                src="<?php echo esc_url(
+                    $theme_uri . "/assets/images/roni-paquetes@2x.png",
+                ); ?>"
                 class="pricing-mascot img-fluid d-none d-lg-block"
                 alt="Roni"
             />
