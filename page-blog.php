@@ -150,8 +150,9 @@ $theme_uri = get_template_directory_uri();
         <div class="row" data-aos="fade-up" data-aos-duration="1000">
             <div class="col-12 text-center">
                 <a
-                    href="#"
+                    href="https://pages.incrediblepizzachihuahua.com/blog"
                     class="btn btn-secondary rounded-pill"
+                    target="_blank"
                     >Ver blog</a
                 >
             </div>
