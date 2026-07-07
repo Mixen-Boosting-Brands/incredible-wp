@@ -91,7 +91,7 @@
                 </nav>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#" class="btn btn-primary rounded-pill mb-3"
+                        <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-primary rounded-pill mb-3"
                             >Únete al club</a
                         >
                     </li>

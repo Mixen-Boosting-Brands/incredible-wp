@@ -118,7 +118,7 @@ $theme_uri = get_template_directory_uri();
                                 >
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-info rounded-pill"
+                        <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-info rounded-pill"
                             >Lo quiero</a
                         >
                     </div>
@@ -170,7 +170,7 @@ $theme_uri = get_template_directory_uri();
                             </li>
                         </ul>
                         <a
-                            href="#"
+                            href="https://registro.incrediblepizzachihuahua.com/app/"
                             class="btn btn-secondary rounded-pill"
                             >Lo quiero</a
                         >
@@ -220,7 +220,7 @@ $theme_uri = get_template_directory_uri();
                                 >
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary rounded-pill"
+                        <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-primary rounded-pill"
                             >Lo quiero</a
                         >
                     </div>
