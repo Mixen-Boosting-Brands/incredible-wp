@@ -147,7 +147,7 @@
                     <div class="col-6 col-xl-3 my-auto text-end">
                         <ul class="list-inline mb-0 d-none d-xl-block">
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-primary rounded-pill"
+                                <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-primary rounded-pill"
                                     >Únete al club</a
                                 >
                             </li>
