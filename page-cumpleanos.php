@@ -261,7 +261,7 @@ $theme_uri = get_template_directory_uri();
                                 1.5 horas de animador exclusivo.
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-info rounded-pill"
+                        <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-info rounded-pill"
                             >Lo quiero</a
                         >
                     </div>
@@ -315,7 +315,7 @@ $theme_uri = get_template_directory_uri();
                             </li>
                         </ul>
                         <a
-                            href="#"
+                            href="https://registro.incrediblepizzachihuahua.com/app/"
                             class="btn btn-secondary rounded-pill"
                             >Lo quiero</a
                         >
@@ -367,7 +367,7 @@ $theme_uri = get_template_directory_uri();
                                 1.5 horas de animador exclusivo.
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary rounded-pill"
+                        <a href="https://registro.incrediblepizzachihuahua.com/app/" class="btn btn-primary rounded-pill"
                             >Lo quiero</a
                         >
                     </div>
@@ -426,7 +426,7 @@ $theme_uri = get_template_directory_uri();
                                 Incredible Glow
                             </p>
                             <a
-                                href="#"
+                                href="https://registro.incrediblepizzachihuahua.com/app/"
                                 class="btn btn-info rounded-pill"
                                 >Lo quiero</a
                             >
@@ -495,7 +495,7 @@ $theme_uri = get_template_directory_uri();
                         <div class="col-7">
                             <p class="pricing-title mb-3">Plus Glow</p>
                             <a
-                                href="#"
+                                href="https://registro.incrediblepizzachihuahua.com/app/"
                                 class="btn btn-primary rounded-pill"
                                 >Lo quiero</a
                             >
