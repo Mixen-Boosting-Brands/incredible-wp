@@ -131,7 +131,7 @@ $theme_uri = get_template_directory_uri();
 </section>
 
 <!-- Video: embed YouTube -->
-<section style="background-color: #000" class="py-5">
+<section class="section-rojo py-5">
     <div class="container">
         <!-- Reemplazar src con la URL del embed de YouTube:
              https://www.youtube.com/embed/VIDEO_ID -->
