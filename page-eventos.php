@@ -140,19 +140,7 @@ $theme_uri = get_template_directory_uri();
             data-aos="fade-up"
             data-aos-duration="1000"
         >
-            <iframe
-                src=""
-                title="Eventos Incredible Pizza Chihuahua"
-                allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                "
-                allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/Wj0UUsICTAA?si=gc_c73qBfd8CvNt1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </section>
