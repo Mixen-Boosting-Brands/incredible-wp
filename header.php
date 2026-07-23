@@ -5,6 +5,83 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <?php
+        global $wp;
+
+        if ( is_singular() && has_excerpt() ) {
+            $incredible_seo_description = wp_strip_all_tags( get_the_excerpt() );
+        } elseif ( is_singular() ) {
+            $incredible_seo_description = wp_trim_words(
+                wp_strip_all_tags( get_the_content() ),
+                30,
+            );
+        } elseif ( is_category() || is_tag() || is_tax() ) {
+            $incredible_seo_description = wp_strip_all_tags( term_description() );
+        } else {
+            $incredible_seo_description = "";
+        }
+
+        if ( empty( $incredible_seo_description ) ) {
+            $incredible_seo_description = get_bloginfo( "description" );
+        }
+
+        $incredible_seo_image =
+            get_template_directory_uri() . "/assets/images/logo@2x.png";
+        if ( is_singular() && has_post_thumbnail() ) {
+            $incredible_seo_image = get_the_post_thumbnail_url(
+                get_the_ID(),
+                "full",
+            );
+        }
+
+        $incredible_seo_url = home_url( $wp->request );
+        $incredible_seo_robots =
+            is_search() || is_404() ? "noindex, follow" : "index, follow";
+        ?>
+
+        <meta name="description" content="<?php echo esc_attr(
+            $incredible_seo_description,
+        ); ?>" />
+        <meta name="robots" content="<?php echo esc_attr(
+            $incredible_seo_robots,
+        ); ?>" />
+        <link rel="canonical" href="<?php echo esc_url(
+            $incredible_seo_url,
+        ); ?>" />
+
+        <meta property="og:type" content="<?php echo esc_attr(
+            is_singular() ? "article" : "website",
+        ); ?>" />
+        <meta property="og:site_name" content="<?php bloginfo(
+            "name",
+        ); ?>" />
+        <meta property="og:title" content="<?php echo esc_attr(
+            wp_get_document_title(),
+        ); ?>" />
+        <meta property="og:description" content="<?php echo esc_attr(
+            $incredible_seo_description,
+        ); ?>" />
+        <meta property="og:url" content="<?php echo esc_url(
+            $incredible_seo_url,
+        ); ?>" />
+        <meta property="og:image" content="<?php echo esc_url(
+            $incredible_seo_image,
+        ); ?>" />
+        <meta property="og:locale" content="<?php echo esc_attr(
+            get_locale(),
+        ); ?>" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="<?php echo esc_attr(
+            wp_get_document_title(),
+        ); ?>" />
+        <meta name="twitter:description" content="<?php echo esc_attr(
+            $incredible_seo_description,
+        ); ?>" />
+        <meta name="twitter:image" content="<?php echo esc_url(
+            $incredible_seo_image,
+        ); ?>" />
+
         <link
             rel="icon"
             type="image/png"
