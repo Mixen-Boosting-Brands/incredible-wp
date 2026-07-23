@@ -162,16 +162,16 @@
             </svg>
         </footer>
 
-        <!-- a
-            href="https://wa.me/526144222550?text=<php echo rawurlencode(
-                "Hola, necesito información.",
+        <a
+            href="https://wa.me/526142218487?text=<?php echo rawurlencode(
+                "¡Hola Incredible! Necesito más información.",
             ); ?>"
             class="whatsapp"
             target="_blank"
             rel="noopener"
         >
             <i class="fab fa-whatsapp whatsapp-icon"></i>
-        </a -->
+        </a>
 
         <div class="text-center py-3">
             <small>
