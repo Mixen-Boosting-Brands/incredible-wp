@@ -29,7 +29,7 @@
                 <a
                     class="btn btn-light rounded-pill"
                     href="https://wa.me/526142218487?text=<?php echo rawurlencode(
-                        "¡Hola " . get_bloginfo("name") . "! Quiero cotizar un evento.",
+                        "¡Hola " . get_bloginfo("name") . "! Quiero cotizar un evento. Vengo de la página web.",
                     ); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"

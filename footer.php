@@ -164,7 +164,7 @@
 
         <a
             href="https://wa.me/526142218487?text=<?php echo rawurlencode(
-                "¡Hola " . get_bloginfo("name") . "! Necesito más información.",
+                "¡Hola " . get_bloginfo("name") . "! Necesito más información. Vengo de la página web.",
             ); ?>"
             class="whatsapp"
             target="_blank"
