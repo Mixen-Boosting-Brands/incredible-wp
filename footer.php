@@ -175,8 +175,7 @@
 
         <div class="text-center py-3">
             <small>
-                <a href="#" class="text-muted">Aviso de privacidad</a>. | Design
-                by:
+                Design by:
                 <a href="https://mixen.mx/" target="_blank" class="text-muted">mixen.mx</a>
             </small>
         </div>
