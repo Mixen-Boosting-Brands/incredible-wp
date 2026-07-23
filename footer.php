@@ -176,7 +176,7 @@
         <div class="text-center py-3">
             <small>
                 Design by:
-                <a href="https://mixen.mx/" target="_blank" class="text-muted">mixen.mx</a>
+                <a href="https://mixen.mx/" target="_blank" class="text-muted">Mixen</a>
             </small>
         </div>
 
